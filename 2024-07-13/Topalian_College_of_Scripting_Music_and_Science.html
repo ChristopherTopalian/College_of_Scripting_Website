@@ -1,0 +1,429 @@
+<!-- Dedicated to God the Father -->
+<!-- All Rights Reserved Christopher Andrew Topalian Copyright 2000-2024 -->
+<!-- https://github.com/ChristopherTopalian -->
+<!-- https://github.com/ChristopherAndrewTopalian -->
+<!-- Topalian_College_of_Scripting_Music_and_Science.html -->
+<!-- Version 2024-07-13 -->
+
+<html>
+<head>
+<title> College of Scripting Music & Science </title>
+
+<meta charset = "UTF-8">
+
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+
+<meta name = "description" content = "College of Scripting Music & Science has been teaching the world for free since March of 2007. Happy Scripting! JavaScript Tutorials, Python and more">
+
+<meta name = "keywords" content = "javascript, programming, scripting, tutorials, code, learn, computer science, applications, learn to code, computer programmer, scripting tutorials">
+
+<meta name = "author" content = "Christopher Andrew Topalian">
+
+<!-- Open Graph Meta Tags -->
+<meta property = "og:title" content = "College of Scripting Music & Science">
+
+<meta property = "og:description" content = "College of Scripting Music & Science has been teaching the world for free since March of 2007. Happy Scripting! JavaScript Tutorials, Python and more">
+
+<!--
+<meta property = "og:image" content = "https://collegeofscripting.weebly.com/uploads/6/4/4/8/64482293/true-ai-by-christopher-topalian-2023-april-18_orig.png">
+-->
+
+<meta property = "og:url" content = "https://collegeofscripting.weebly.com">
+
+<!-- Twitter Meta Tags -->
+<meta name = "twitter:card" content = "summary_large_image">
+
+<meta name = "twitter:title" content = "College of Scripting Music & Science">
+
+<meta name = "twitter:description" content = "College of Scripting Music & Science has been teaching the world for free since March of 2007. Happy Scripting">
+
+<!--
+<meta name = "twitter:image" content = "https://collegeofscripting.weebly.com/uploads/6/4/4/8/64482293/true-ai-by-christopher-topalian-2023-april-18_orig.png">
+-->
+
+<style>
+
+/* Dedicated to God the Father */
+
+/* All Rights Reserved Christopher Topalian Copyright 2000-2024 */
+
+/* https://github.com/ChristopherTopalian */
+
+/* style001.css */
+
+body
+{
+    background-color: rgb(50, 50, 50);
+    cursor: pointer;
+}
+
+.dedication
+{
+    position: relative;
+    padding-bottom: 10px;
+    font-family: arial;
+    font-size: 20px;
+    color: rgb(100, 100, 100);
+    display: flex;
+    flex-direction: column;
+    /* background-size: cover; */
+    align-items: center;
+    font-weight: bold;
+}
+
+.gridContainerStyle {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    background-color: rgb(40, 40, 40);
+}
+
+.gridItemStyle {
+    width: 175px;
+    height: 175px;
+    padding: 5px;
+    margin: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-align: center;
+}
+
+.theTitleStyle
+{
+    position: relative;
+    padding-bottom: 10px;
+    font-family: arial;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    /* background-size: cover; */
+    align-items: center;
+}
+
+.nameOfElement
+{
+    position: relative;
+    display: inline;
+}
+  
+.nameOfElement:hover:after
+{
+    position: absolute;
+    left: 5px;
+    bottom: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 98;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    border-radius: 0px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    content: attr(gloss);
+}
+
+/* marker icon, which appears when a person hovers their mouse arrow over a tile */
+.nameOfElement:hover:before
+{
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    border-style: solid;
+    border-width: 0 5px 5px 5px transparent;
+    border-color: rgb(255, 255, 255);
+    content: "";
+    z-index: 100;
+}
+
+.fillStyle
+{
+    width: 100%;
+    /* height: auto;*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;*/
+
+    background-position: center top;
+}
+
+</style>
+
+<script>
+
+function ge(whichId)
+{
+    let result = document.getElementById(whichId);
+
+    return result;
+}
+
+function ce(whichType)
+{
+    let result = document.createElement(whichType);
+
+    return result;
+}
+
+function ba(whichElement)
+{
+    let result = document.body.append(whichElement);
+
+    return result;
+}
+
+function extractFileName(whichPath)
+{
+    let pathParts = whichPath.split('/');
+
+    let fileNameWithExtension = pathParts[pathParts.length - 1];
+
+    let fileNameParts = fileNameWithExtension.split('.');
+
+    // [0] is the file name without extension
+    let fileNameOnly = fileNameParts[0];
+
+    return fileNameOnly;
+}
+
+function loadSounds()
+{
+    let sounds =
+    [
+        'https://collegeofscripting.weebly.com/uploads/6/4/4/8/64482293/sfx_blip_001.mp4',
+
+        'https://collegeofscripting.weebly.com/uploads/6/4/4/8/64482293/sfx_warp_001.mp3'
+    ];
+
+    for (let z = 0; z < sounds.length; z++)
+    {
+        let theSound = ce('audio');
+        theSound.src = sounds[z];
+        theSound.loop = false;
+        theSound.id = extractFileName(sounds[z]);
+        theSound.volume = 1.0;
+        ba(theSound);
+    }
+}
+
+let theElements =
+[
+{ name: `C Computer Science`, url: `https://sites.google.com/view/collegeofscripting/c_computer_science`, imageUrl: `https://m.media-amazon.com/images/I/81Q08sTRVPL._SL1500_.jpg`, number: `C`, tag: `c`, abbreviation: `` },
+{ name: `C++ Computer Science`, url: `https://sites.google.com/view/collegeofscripting/cpluspluscomputerscience`, imageUrl: `https://m.media-amazon.com/images/I/71lAkAU9d5L._SL1500_.jpg`, number: `C++`, tag: `c++`, abbreviation: `` },
+{ name: `JavaScript Code Volume 1`, url: `https://sites.google.com/view/collegeofscripting/javascript_code_volume_1`, imageUrl: `https://m.media-amazon.com/images/I/71DpI3S7WjL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript Graphics Editor`, url: `https://sites.google.com/view/collegeofscripting/topalian_javascript_graphics_editor`, imageUrl: `https://m.media-amazon.com/images/I/71F4FAr65XL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JS Earth`, url: `https://sites.google.com/view/collegeofscripting/topalian_javascript_earth`, imageUrl: `https://m.media-amazon.com/images/I/71TQt3vJhvL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `none` },
+{ name: `JS Clock`, url: `https://sites.google.com/view/collegeofscripting/topalian_javascript_clock`, imageUrl: `https://m.media-amazon.com/images/I/71BZ0XGLMTL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `none` },
+{ name: `JavaScript Frames Per Second`, url: `https://sites.google.com/view/collegeofscripting/topalian_javascript_frames_per_second`, imageUrl: `https://m.media-amazon.com/images/I/61fLU9O3AUL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript Address Book`, url: `https://sites.google.com/view/collegeofscripting/topalian_address_book`, imageUrl: `https://m.media-amazon.com/images/I/71y3to4rySL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript Sun Report`, url: `https://sites.google.com/view/collegeofscripting/topalian_javascript_sun_report`, imageUrl: `https://m.media-amazon.com/images/I/81QbYrTD3rL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript Robot AI`, url: `https://sites.google.com/view/collegeofscripting/topalian_javascript_robot_ai`, imageUrl: `https://m.media-amazon.com/images/I/71dhfF4SDhL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript Cipher Generator`, url: `https://sites.google.com/view/collegeofscripting/topalian_cipher_generator`, imageUrl: `https://m.media-amazon.com/images/I/71FAp9EtdgL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript Calculation Engine`, url: `https://sites.google.com/view/collegeofscripting/topalian_calculation_engine`, imageUrl: `https://m.media-amazon.com/images/I/71hU7SeBuvL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript Password Generator`, url: `https://sites.google.com/view/collegeofscripting/topalian_password_generator`, imageUrl: `https://m.media-amazon.com/images/I/713bqnDtByL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript Game Engine`, url: `https://sites.google.com/view/collegeofscripting/topalian_game_engine_019`, imageUrl: `https://m.media-amazon.com/images/I/71zK3HjNBCL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript Game Engine Video Navigator`, url: `https://sites.google.com/view/collegeofscripting/topalian_game_engine_video_navigator"`, imageUrl: `https://m.media-amazon.com/images/I/71zXZK+5KeL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript CSS Grid`, url: `https://sites.google.com/view/collegeofscripting/topalian_chemistry_css_grid`, imageUrl: `https://m.media-amazon.com/images/I/71VYMK4v3PL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript Custom Grid`, url: `https://sites.google.com/view/collegeofscripting/topalian_chemistry_custom_grid`, imageUrl: `https://m.media-amazon.com/images/I/81ctDVfF4OL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript Trigonometry Pie Menu`, url: `https://sites.google.com/view/collegeofscripting/topalian_javascript_trigonometry_pie_menu`, imageUrl: `https://m.media-amazon.com/images/W/MEDIAX_849526-T1/images/I/71oD8QUVylL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript Math Generator`, url: `https://sites.google.com/view/collegeofscripting/topalian_javascript_math_generator`, imageUrl: `https://m.media-amazon.com/images/I/71XTQhTvxOL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript Calculator`, url: `https://sites.google.com/view/collegeofscripting/topalian_javascript_calculator`, imageUrl: `https://m.media-amazon.com/images/I/71tnUK1O75L._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript True AI`, url: `https://sites.google.com/view/collegeofscripting/topalian_javascript_true_ai`, imageUrl: `https://m.media-amazon.com/images/I/71YqxMynMxL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript True AI 16 Gates`, url: `https://sites.google.com/view/collegeofscripting/topalian_javascript_true_ai_16_gates`, imageUrl: `https://m.media-amazon.com/images/I/71eS-dIZaNL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript Clock`, url: `https://sites.google.com/view/collegeofscripting/topalian_javascript_clock`, imageUrl: `https://m.media-amazon.com/images/I/71TCTA8+P0L._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript Identity Generator`, url: `https://sites.google.com/view/collegeofscripting/topalian_javascript_identity_generator`, imageUrl: `https://m.media-amazon.com/images/I/811CIzoWafL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript Filter Functions`, url: `https://sites.google.com/view/collegeofscripting/topalian_javascript_filter_functions`, imageUrl: `https://m.media-amazon.com/images/I/81TqKCrzcGL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JavaScript Text Investigator`, url: `https://sites.google.com/view/collegeofscripting/topalian_javascript_text_investigator`, imageUrl: `https://m.media-amazon.com/images/I/71iTHgTn+dL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `pywebview navigator`, url: `https://sites.google.com/view/collegeofscripting/topalian_python_javascript_navigator`, imageUrl: `https://m.media-amazon.com/images/I/8194J79LHXL._SL1500_.jpg`, number: `PY`, tag: `js`, abbreviation: `` },
+{ name: `python computer science`, url: `https://sites.google.com/view/collegeofscripting/python_computer_science`, imageUrl: `https://m.media-amazon.com/images/I/71qMd1iaCNL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `spreadsheet to js`, url: `https://sites.google.com/view/collegeofscripting/topalian_spreadsheet_to_javascript`, imageUrl: `https://m.media-amazon.com/images/I/71Fy3TGQc3L._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `Combine JS Scripts`, url: `https://sites.google.com/view/collegeofscripting/topalian_combine_javascript_files`, imageUrl: `https://m.media-amazon.com/images/I/81hiaVtX4bL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JS Code Editor`, url: `https://sites.google.com/view/collegeofscripting/topalian_javascript_code_editor`, imageUrl: `https://m.media-amazon.com/images/I/71kA71cUqnL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JS 3D Editor`, url: `https://sites.google.com/view/collegeofscripting/topalian_javascript_3d_editor`, imageUrl: `https://m.media-amazon.com/images/I/71DQw1Tth4L._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `JS Teacher`, url: `https://sites.google.com/view/collegeofscripting/topalian_javascript_teacher`, imageUrl: `https://m.media-amazon.com/images/I/71VoaeqF-AL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `Node.js Array of Objects`, url: `https://github.com/ChristopherTopalian/Topalian_Node.js/tree/main/Topalian_Node.js_001/array_of_objects`, imageUrl: `https://m.media-amazon.com/images/I/71RAM0hv9XL._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `Code Book with Markdown`, url: `https://sites.google.com/view/collegeofscripting/make_a_code_book_with_markdown`, imageUrl: `https://m.media-amazon.com/images/I/71I9AqJsG1L._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` },
+{ name: `Guitar for Humans`, url: `https://sites.google.com/view/collegeofscripting/guitar-for-humans`, imageUrl: `https://m.media-amazon.com/images/I/71MDRyoTt0L._SL1500_.jpg`, number: `JS`, tag: `js`, abbreviation: `` }
+];
+
+function makeTiles(whichArray, rows, columns)
+{
+    let dedication = ce('div');
+    dedication.className = "dedication";
+    dedication.innerHTML = 'Dedicated to God the Father';
+    dedication.id = 'dedication';
+    ba(dedication);
+
+    //-//
+
+    // type of element
+    let theTitle = document.createElement("div");
+
+    // className
+    theTitle.className = "theTitleStyle";
+    theTitle.style.textAlign = 'center';
+
+    // innerHTML
+    theTitle.innerHTML = 'College of Scripting Music & Science';
+
+    // append theTitle to the document body
+    document.body.append(theTitle);
+
+    //----//
+
+    // type of element
+    let mainDiv = document.createElement("div");
+
+    // className
+    mainDiv.className = "gridContainerStyle";
+
+    // id
+    mainDiv.id = "mainDivId";
+
+    // append mainDiv to the document body
+    document.body.append(mainDiv);
+    
+    //----//
+
+    for (let x = 0; x < whichArray.length; x++)
+    {
+        // type of element
+        let theTile = document.createElement("div");
+
+        // id
+        theTile.id = whichArray[x].name;
+
+        // src
+        theTile.src = whichArray[x].imageUrl;
+
+        // className
+        theTile.className = "gridItemStyle nameOfElement";
+
+        // zIndex (layer)
+        theTile.style.zIndex = 1;
+
+        // border
+        theTile.style.borderStyle = "solid";
+        theTile.style.borderWidth = "3px";
+        theTile.style.borderColor = "white";
+        
+        // title
+        // theTile.title += whichArray[x].number;
+        // theTile.title += "\n";
+        //  theTile.title += whichArray[x].abbreviation;
+        // theTile.title += "\n";
+        // theTile.title += whichArray[x].name;
+
+        // gloss
+        // when a person hovers their mouse over a tile they will see a pop up label appear that shows the name of the chemical element
+        theTile.setAttribute("gloss", whichArray[x].name);
+        
+        // innerHTML
+        theTile.innerHTML = whichArray[x].abbreviation + "<br>";
+        
+        // style the texture
+        theTile.style.overflow = "hidden";
+        theTile.style.objectFit = "cover";
+
+        // font
+        theTile.style.fontFamily = "tahoma";
+        theTile.style.fontWeight = "bold";
+        theTile.style.fontSize = "25px";
+        theTile.style.color = "rgb(255, 255, 255)";
+        theTile.style.textAlign = "center";
+
+        // when left clicked
+        theTile.onclick = function()
+        {
+            theTile.style.borderColor = 'rgb(255, 0, 255)';
+            
+            window.open(whichArray[x].url, '_blank');
+        };
+        
+        // when right clicked
+        //theTile.oncontextmenu = function()
+        //{
+            // window.open(whichArray[x].imageUrl);
+        //};
+
+        theTile.onmouseover = function()
+        {
+            theTile.style.borderColor = 'rgb(0, 255, 255)';
+        };
+
+        theTile.onmouseout = function()
+        {
+            theTile.style.borderColor = 'rgb(255, 255, 255)';
+        };
+
+        // append theTile to mainDiv
+        mainDiv.append(theTile);
+
+        //----//
+        
+        // type of element
+        let theImage = document.createElement("img");
+        
+        // src
+        theImage.src = whichArray[x].imageUrl;
+        
+        // className
+        //theImage.className = "fillStyle";
+
+        theImage.style.width = '100%';
+        theImage.style.position = 'absolute';
+        theImage.style.top = '0px';
+        theImage.style.left = '0px';
+        
+        // zIndex (layer)
+        theImage.style.zIndex = 1;
+
+        theImage.onmouseover = function()
+        {
+            ge('sfx_warp_001').play();
+        };
+
+        theImage.onclick = function()
+        {
+            ge('sfx_blip_001').play();
+        };
+        
+        // append theImage to theTile
+        theTile.append(theImage);
+    } 
+}
+
+function whenLoaded()
+{
+    loadSounds();
+
+    /*
+    // prevent right click menu
+    window.oncontextmenu = function(theEvent)
+    {
+        theEvent.preventDefault();
+    };
+    */
+
+    makeTiles(
+        theElements,  // which Array
+        theElements.length / 5,  // rows
+        5  // columns
+    );
+}
+
+</script>
+
+</head>
+
+<body onload = "whenLoaded();">
+
+</body>
+
+</html>
